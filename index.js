@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./Server/routes/auth");
+const postRoute = require("./Server/routes/posts");
 const connectDB = require("./Server/database/db");
 const path = require("path");
 const morgan = require("morgan");
@@ -20,5 +21,6 @@ connectDB();
 
 
 app.use("/api/auth", authRoute);
+app.use("/api/posts", postRoute);
 
 app.listen(PORT, () => { console.log(`Server is on ${NODE_ENV}, running on http://localhost:${PORT}`) });
