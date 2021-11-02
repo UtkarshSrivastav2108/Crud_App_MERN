@@ -23,4 +23,4 @@ connectDB();
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 
-app.listen(PORT, () => { console.log(`Server is on ${NODE_ENV}, running on http://localhost:${PORT}`) });
+app.listen(PORT, () => { console.log(`Server is on ${NODE_ENV}, running on port http://localhost:${PORT}`) });
