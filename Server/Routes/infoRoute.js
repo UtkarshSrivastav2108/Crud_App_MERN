@@ -14,19 +14,13 @@ router.get("/", async (req, res) => {
 
 
 // GET BY ID
+
+
+
+//GET POST
 router.get("/:id", async (req, res) => {
     try {
         const info = await Info.findById(req.params.id);
-        res.status(200).json(info);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-
-router.get("/", async (res, req) => {
-    try {
-        const info = await Info.findOne(end_year);
         res.status(200).json(info);
     } catch (err) {
         res.status(500).json(err);
